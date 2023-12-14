@@ -23,7 +23,7 @@ export default {
       </nav>
       <router-view></router-view>
     </section>
-    <footer class="flex justify-between">
+    <footer class="flex justify-between items-center mt-10 border-t border-t-slate-200">
       <router-link to="/"><img src="/images/SVG/mainBlack.svg" width="70" alt="logoMultiStep"></router-link>
       <a class="py-2 hover:border-black hover:border-b" href="https://sergiorozco.com/" target="_blank">Develoaed by <strong>Sorozco</strong></a>
     </footer>

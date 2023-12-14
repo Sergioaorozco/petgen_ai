@@ -42,21 +42,21 @@ async function getAiNames() {
     <h1 class="text-3xl text-slate-700 font-semibold">Enjoy your Names!</h1>
     <h2 class="text-xl text-slate-500">Generated with Google AI - Gemini Pro</h2>
   </div>
-  <div v-if="showLoader" class="grid grid-cols-3 gap-3">
+  <div v-if="showLoader" class="grid grid-cols-2 lg:grid-cols-3 gap-3">
     <Skeleton height="10" v-for="item in 12" class="h-14 w-16"></Skeleton>
   </div>
-  <section v-else-if="isError">
-    <div class="py-4 bg-red-100 border border-red-200 px-5 mb-10 rounded-lg">
-      We had an error Generating the names. Pleasy try again Later.
-    </div>
-    <router-link class="bg-amber-500 px-10 text-amber-950 font-semibold py-3 rounded-lg hover:bg-amber-400 transition-colors duration-300" to="/">Vuelve a Comenzar</router-link>
-  </section>
-  <div v-else-if="data">
-    <div class="grid grid-cols-3 gap-x-6 gap-y-3">
+  <section v-else-if="data">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-3">
       <div class="h-14 py-3 px-5 border border-slate-200 rounded-lg bg-slate-100" v-for="item in cadStore.completeBody.name" :key="item.name">
         {{ item }}
       </div>
     </div>
-    <button @click="getAiNames()" class="bg-amber-500 px-10 text-amber-950 font-semibold py-3 rounded-lg mt-10 hover:bg-amber-400 transition-colors duration-300">Generate Again</button>
-</div>
+    <button @click="getAiNames()" class="bg-amber-500 px-10 text-amber-950 font-semibold py-3 rounded-lg mt-2 lg:mt-10 hover:bg-amber-400 transition-colors duration-300 w-full lg:w-fit">Generate Again</button>
+  </section>
+  <section v-else-if="isError">
+    <div class="py-4 bg-red-100 border border-red-200 px-5 mb-4 lg:mb-10 rounded-lg">
+      We had an error Generating the names. Pleasy try again Later.
+    </div>
+    <router-link class="bg-amber-500 px-10 text-amber-950 font-semibold py-3 rounded-lg hover:bg-amber-400 transition-colors duration-300 w-full lg:w-fit" to="/">Vuelve a Comenzar</router-link>
+  </section>
 </template>
