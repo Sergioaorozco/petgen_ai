@@ -12,7 +12,7 @@
     <section>
       <div class="grid grid-cols-3 mt-10 gap-4">
         <figure v-for="(item,index) in details" class="w-full">
-          <div @click="selectItem(item)" :key="index" :class="{'border-amber-200 border-4 bg-amber-50': isSelected === item.name}" class="hover:bg-amber-50 hover:border-amber-200 cursor-pointer py-10 border  text-center w-full rounded-lg">{{item.name}}</div>
+          <div @click="selectItem(item)" :key="index" :class="{'border-amber-200 border-4 bg-amber-50': isSelected === item.body}" class="hover:bg-amber-50 hover:border-amber-200 cursor-pointer py-10 border  text-center w-full rounded-lg">{{item.body}}</div>
         </figure>
       </div>
     </section>
@@ -29,12 +29,12 @@ export default {
       cadStore: useCadStore(),
       isSelected: null,
       details: [
-        {face:'Unicorn', img:'this is an image'},
-        {face:'dinosaur', img:'this is an image'},
-        {face:'Eagle', img:'this is an image'},
-        {face:'Fish', img:'this is an image'},
-        {face:'Oso', img:'this is an image'},
-        {face:'Pato', img:'this is an image'},
+        {body:'Unicorn', img:'this is an image'},
+        {body:'dinosaur', img:'this is an image'},
+        {body:'Eagle', img:'this is an image'},
+        {body:'Fish', img:'this is an image'},
+        {body:'Oso', img:'this is an image'},
+        {body:'Pato', img:'this is an image'},
       ],
     }
   },
@@ -44,12 +44,10 @@ export default {
       this.$router.push('/step3');
     },
     selectItem(item) {
-      this.isSelected = item.face
+      this.isSelected = item.body
       this.isAvail = true;
-      this.cadStore.completeBody.character = item.name
+      this.cadStore.completeBody.character = item.body
     }
-  },
-  components: {
   }
 }
 </script>

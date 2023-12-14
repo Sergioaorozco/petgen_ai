@@ -7,7 +7,7 @@ import App from './App.vue'
 // Styles
 import 'primevue/resources/themes/soho-light/theme.css'
 import "primevue/resources/primevue.min.css";
-import './style.css'
+import './style.scss'
 
 import {createRouter, createWebHistory} from 'vue-router'
 import Home from './views/Home.vue'
