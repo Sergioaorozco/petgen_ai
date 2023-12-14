@@ -5,14 +5,14 @@
         <Steps :model="cadStore.items" :readonly="true" aria-label="Form Steps"/>
       </div>
       <nav class="flex justify-between items-center">
-        <h1 class="text-xl text-slate-600 font-bold">Select your pet type</h1>
+        <h1 class="text-xl text-slate-600 font-bold">Select your leg's pet</h1>
         <button @click="checkStatus" :class="{'uiDisabled': !isAvail}" class="bg-amber-500 disabled:bg-amber-500/50 px-10 py-1 rounded-lg text-lg font-semibold">Next</button>
       </nav>
     </section>
     <section>
       <div class="grid grid-cols-3 mt-10 gap-4">
         <figure v-for="(item,index) in details" class="w-full">
-          <div @click="selectItem(item)" :key="index" :class="{'border-amber-200 border-4 bg-amber-50': isSelected === item.legs}" class="hover:bg-amber-50 hover:border-amber-200 cursor-pointer py-10 border  text-center w-full rounded-lg">{{item.legs}}</div>
+          <div @click="selectItem(item) , !selectItem" :key="index" :class="{'border-amber-200 border-4 bg-amber-50': isSelected === item.legs}" class="hover:bg-amber-50 hover:border-amber-200 cursor-pointer py-10 border  text-center w-full rounded-lg">{{item.legs}}</div>
         </figure>
       </div>
     </section>
@@ -46,10 +46,8 @@ export default {
     selectItem(item) {
       this.isSelected = item.legs
       this.isAvail = true;
-      this.cadStore.completeBody.character = item.legs
+      this.cadStore.completeBody.legs = item.legs
     }
   },
-  components: {
-  }
 }
 </script>

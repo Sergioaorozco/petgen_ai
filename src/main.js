@@ -1,5 +1,6 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import { VueQueryPlugin } from "@tanstack/vue-query";
 import PrimeVue from 'primevue/config';
 import Steps from 'primevue/steps';
 import App from './App.vue'
@@ -11,6 +12,8 @@ import './style.scss'
 
 import {createRouter, createWebHistory} from 'vue-router'
 import Home from './views/Home.vue'
+import Skeleton from 'primevue/skeleton';
+
 
 const routes = [
   { path: "/", name: 'home', component: Home },
@@ -29,7 +32,9 @@ const router = createRouter({
 const pinia = createPinia()
 const app = createApp(App)
 app.use(router);
+app.use(VueQueryPlugin);
 app.use(PrimeVue);
-app.component('Steps',Steps)
+app.component('Steps',Steps);
+app.component('Skeleton',Skeleton);
 app.use(pinia);
 app.mount('#app')

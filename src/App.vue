@@ -17,15 +17,15 @@ export default {
       <nav class="flex justify-between mb-20">
         <router-link to="/"><img src="/images/SVG/mainColor.svg" width="120" alt="logoMultiStep"></router-link>
         <ul class="flex justify-between gap-x-5">
-          <RouterLink to="/about">About</RouterLink>
-          <a href="https://github.com/Sergioaorozco/petgen_ai" target="_blank">Github</a>
+          <RouterLink class="hover:border-black hover:border-b" to="/about">About</RouterLink>
+          <a class="hover:border-black hover:border-b" href="https://github.com/Sergioaorozco/petgen_ai" target="_blank">Github</a>
         </ul>
       </nav>
       <router-view></router-view>
     </section>
     <footer class="flex justify-between">
       <router-link to="/"><img src="/images/SVG/mainBlack.svg" width="70" alt="logoMultiStep"></router-link>
-      <p>Developed by Sorozco</p>
+      <a class="py-2 hover:border-black hover:border-b" href="https://sergiorozco.com/" target="_blank">Develoaed by <strong>Sorozco</strong></a>
     </footer>
   </div>
 </template>

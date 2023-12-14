@@ -2,10 +2,10 @@
   <div>
     <section>
       <div class="mb-20">
-        <Steps :model="cadStore.items" :readonly="true" aria-label="Form Steps"/>
+        <Steps v-model:activeStep="active" :model="cadStore.items" :readonly="true" aria-label="Form Steps"/>
       </div>
       <nav class="flex justify-between items-center">
-        <h1 class="text-xl text-slate-600 font-bold">Select your pet type</h1>
+        <h1 class="text-xl text-slate-600 font-bold">Select your body's Pet</h1>
         <button @click="checkStatus" :class="{'uiDisabled': !isAvail}" class="bg-amber-500 disabled:bg-amber-500/50 px-10 py-1 rounded-lg text-lg font-semibold">Next</button>
       </nav>
     </section>
@@ -46,7 +46,7 @@ export default {
     selectItem(item) {
       this.isSelected = item.body
       this.isAvail = true;
-      this.cadStore.completeBody.character = item.body
+      this.cadStore.completeBody.body = item.body
     }
   }
 }

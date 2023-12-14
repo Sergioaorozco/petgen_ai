@@ -5,7 +5,7 @@
         <Steps :model="cadStore.items" :readonly="true" aria-label="Form Steps"/>
       </div>
       <nav class="flex justify-between items-center">
-        <h1 class="text-xl text-slate-600 font-bold">Select your pet Face</h1>
+        <h1 class="text-xl text-slate-600 font-bold">Select your face's pet</h1>
         <button @click="checkStatus" :class="{'uiDisabled': !isAvail}" class="bg-amber-500 disabled:bg-amber-500/50 px-10 py-1 rounded-lg text-lg font-semibold">Next</button>
       </nav>
     </section>
@@ -41,13 +41,12 @@ export default {
   methods: {
     checkStatus(e) {
       e.preventDefault();
-      console.log('activated');
       this.$router.push('/step2');
     },
     selectItem(item) {
       this.isSelected = item.face
       this.isAvail = true;
-      this.cadStore.completeBody.character = item.face
+      this.cadStore.completeBody.face = item.face
     }
   },
   components: {
