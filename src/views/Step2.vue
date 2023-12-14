@@ -2,7 +2,7 @@
   <div>
     <section>
       <div class="mb-20">
-        <Steps v-model:activeStep="active" :model="cadStore.items" :readonly="true" aria-label="Form Steps"/>
+        <Steps :activeStep="1" :model="cadStore.items" :readonly="false"/>
       </div>
       <nav class="flex justify-between items-center">
         <h1 class="text-xl text-slate-600 font-bold">Select your body's Pet</h1>

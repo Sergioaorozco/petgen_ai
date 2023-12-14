@@ -2,7 +2,7 @@
   <div>
     <section>
       <div class="mb-20">
-        <Steps :model="cadStore.items" :readonly="true" aria-label="Form Steps"/>
+        <Steps :activeStep="2" :model="cadStore.items" :readonly="false"/>
       </div>
       <nav class="flex justify-between items-center">
         <h1 class="text-xl text-slate-600 font-bold">Select your leg's pet</h1>

@@ -16,7 +16,18 @@
 }
 
 .p-steps-item {
-  .p-steps-number { border: 1px solid rgb(202, 202, 202);}
+  &.p-steps-current {
+    .p-steps-number { 
+      border: 1px solid rgb(202, 202, 202);
+      background: #ffedcb;
+      color: #351b1b;
+    }
+  }
+  .p-steps-number { 
+    border: 1px solid rgb(202, 202, 202);
+    background: #e2e2e2;
+    color: #747474;
+  }
   &::before{ border-width: 1px; }
 }
 
