@@ -4,6 +4,7 @@ import { useCadStore } from '../stores/infoStore'
 import { useQuery } from "@tanstack/vue-query";
 import { RouterLink } from 'vue-router';
 import {ref} from 'vue'
+import confetti from 'canvas-confetti'
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GOOGLEAPI_KEY)
 const cadStore = useCadStore()
@@ -25,6 +26,7 @@ async function getAiNames() {
       const result = await model.generateContent(prompt);
       const response = result.response.candidates[0].content.parts[0].text.split('\n');
       cadStore.completeBody.name = response
+      confetti();
       return Promise.resolve(response); // Use Promise.resolve to explicitly resolve the promise
     } catch (error) {
       console.error(error);
