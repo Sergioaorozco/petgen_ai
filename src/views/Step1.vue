@@ -2,7 +2,7 @@
   <div>
     <section>
       <div class="mb-20">
-        <Steps :activeStep="0" :model="cadStore.items" :readonly="false"/>
+        <Steps :model="cadStore.items"/>
       </div>
       <nav class="flex justify-between items-center">
         <h1 class="text-xl text-slate-600 font-bold">Select your face's pet</h1>
