@@ -29,12 +29,12 @@ export default {
       cadStore: useCadStore(),
       isSelected: null,
       details: [
-        {body:'Unicorn', img:'this is an image'},
-        {body:'dinosaur', img:'this is an image'},
-        {body:'Eagle', img:'this is an image'},
-        {body:'Fish', img:'this is an image'},
-        {body:'Oso', img:'this is an image'},
-        {body:'Pato', img:'this is an image'},
+        {body:'Unicornio', img:'this is an image'},
+        {body:'Dinosaur', img:'this is an image'},
+        {body:'Mantis', img:'this is an image'},
+        {body:'Capybara', img:'this is an image'},
+        {body:'Spider', img:'this is an image'},
+        {body:'Axolotl', img:'this is an image'},
       ],
     }
   },

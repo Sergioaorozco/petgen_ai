@@ -29,12 +29,12 @@ export default {
       cadStore: useCadStore(),
       isSelected: null,
       details: [
-        {face:'Pollito', img:'this is an image'},
-        {face:'Perro', img:'this is an image'},
-        {face:'Gato', img:'this is an image'},
-        {face:'Ave', img:'this is an image'},
-        {face:'Oso', img:'this is an image'},
-        {face:'Pato', img:'this is an image'},
+        {face:'Penguin', img:'this is an image'},
+        {face:'Giraffe', img:'this is an image'},
+        {face:'Dragon', img:'this is an image'},
+        {face:'Narwhal', img:'this is an image'},
+        {face:'Aye-aye', img:'this is an image'},
+        {face:'Bear', img:'this is an image'},
       ],
     }
   },

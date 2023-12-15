@@ -29,12 +29,12 @@ export default {
       cadStore: useCadStore(),
       isSelected: null,
       details: [
-        {legs:'Pollito', img:'this is an image'},
-        {legs:'Perro', img:'this is an image'},
-        {legs:'Gato', img:'this is an image'},
-        {legs:'Ave', img:'this is an image'},
-        {legs:'Oso', img:'this is an image'},
-        {legs:'Pato', img:'this is an image'},
+        {legs:'Fox', img:'this is an image'},
+        {legs:'Shark', img:'this is an image'},
+        {legs:'Frog', img:'this is an image'},
+        {legs:'Turtle', img:'this is an image'},
+        {legs:'Antelope', img:'this is an image'},
+        {legs:'Hoatzin', img:'this is an image'},
       ],
     }
   },
